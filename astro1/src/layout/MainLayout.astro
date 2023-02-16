@@ -1,0 +1,22 @@
+---
+import "../style/index.css";
+---
+
+<body>
+  <main
+    class="wrapper flex min-h-screen flex-col items-center justify-center bg-gray-800"
+    id="swup"
+  >
+    <slot />
+  </main>
+
+  <script>
+    import Swup from "swup";
+    import SwupHeadPlugin from "@swup/head-plugin";
+    import SwupScriptsPlugin from "@swup/scripts-plugin";
+
+    const swup = new Swup({
+      plugins: [new SwupHeadPlugin(), new SwupScriptsPlugin()],
+    });
+  </script>
+</body>

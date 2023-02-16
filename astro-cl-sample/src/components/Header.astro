@@ -1,0 +1,162 @@
+---
+import Logo from "./Logo.astro";
+import MenuIcon from "./icons/Menu.astro";
+import SocialNetworks from "./SocialNetworks.astro";
+
+const menu = [
+  {
+    name: "Inicio",
+    href: "/",
+  },
+  {
+    name: "Quienes somos",
+    href: "/quienessomos",
+  },
+  {
+    name: "Productos",
+    href: "/productos",
+  },
+  {
+    name: "Servicios",
+    href: "/servicios",
+  },
+  {
+    name: "Contacto",
+    href: "/conctatanos",
+  },
+];
+---
+
+<header
+  class="flex items-center w-full bg-gradient-to-b from-principal-dark via-principal-dark to-principal py-8 px-4 md:px-8 md:py-12 gap-x-8"
+>
+  <div class="flex md:flex-col h-full md:gap-4 w-full justify-between">
+    <nav class="w-win md:w-auto">
+      <div class="md:w-[724px] lg:w-[884px] md:m-auto md:p-2 px-0">
+        <div class="m-auto grid grid-cols-3 gap-4">
+          <div>
+            <Logo />
+          </div>
+          <div class="col-span-2 hidden md:flex">
+            <div class="relative border-gray-200 shadow-lg">
+              <div class="flex items-center p-4">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 9v.906a2.25 2.25 0 01-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 001.183 1.981l6.478 3.488m8.839 2.51l-4.66-2.51m0 0l-1.023-.55a2.25 2.25 0 00-2.134 0l-1.022.55m0 0l-4.661 2.51m16.5 1.615a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V8.844a2.25 2.25 0 011.183-1.98l7.5-4.04a2.25 2.25 0 012.134 0l7.5 4.04a2.25 2.25 0 011.183 1.98V19.5z" />
+                </svg>                
+                <div class="ml-3 overflow-hidden">
+                  <p class="font-medium text-gray-900">Envio correo</p>
+
+                  <p class="max-w-xs truncate text-sm text-gray-500">
+                    ngonzalo@gmail.com
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="relative border-x border-gray-200 shadow-lg">
+              <div class="flex items-center p-4">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 3.75v4.5m0-4.5h-4.5m4.5 0l-6 6m3 12c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 014.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 00-.38 1.21 12.035 12.035 0 007.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 011.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 01-2.25 2.25h-2.25z" />
+                </svg>
+                
+                <div class="ml-3 overflow-hidden">
+                  <p class="max-w-xs text-white">
+                    JR. LOS TERRAZOS F - 12 ASOC. INCA MANCO CAPAC PROG. LA BASILIA / SJL / LIMA.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="relative border-gray-200 shadow-lg">
+              <div class="flex items-center p-4">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                </svg>
+                
+                <div class="ml-3 overflow-hidden">
+                  <p class="font-medium text-gray-900">Envio correo</p>
+
+                  <p class="max-w-xs truncate text-sm text-gray-500">
+                    ngonzalo@gmail.com
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <nav
+      class="flex self-center items-center md:justify-between md:w-full max-w-4xl"
+    >
+      <input type="checkbox" id="menu" hidden class="peer" />
+      <label
+        for="menu"
+        class="relative z-50 md:hidden peer-checked:[&>.first]:hidden peer-checked:[&>.last]:block cursor-pointer transition hover:scale-110 peer-checked:rotate-90 rotate-0"
+      >
+        <MenuIcon />
+      </label>
+      <div
+        class="absolute md:static top-0 left-0 opacity-0 md:opacity-100 w-0 md:w-full transition-all duration-300 peer-checked:w-full peer-checked:opacity-100 z-20 ease-linear"
+      >
+        <ul
+          id="navbar"
+          class="md:relative text-2xl flex flex-col md:flex-row bg-gradient-to-b from-[#ff6900] via-[#ff6900] to-[#cd5500] md:from-transparent md:to-transparent min-h-screen md:min-h-min py-24 md:py-0 md:flex justify-center text-white gap-6 md:gap-x-4 font-semibold text-center text-md md:text-base md:justify-start [&>li>a]:opacity-80 [&>li>a:hover]:opacity-100 [&>li>a:hover]:underline"
+        >
+          {
+            menu.map(({ name, href }) => (
+              <li>
+                <a
+                  class={`transition ${
+                    Astro.url.pathname === href
+                      ? "opacity-100 pointer-events-none"
+                      : "hover:underline-offset-8"
+                  }`}
+                  href={href}
+                  rel={Astro.url.pathname !== href && "preload"}
+                >
+                  {name}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <SocialNetworks theme="white" mobileHidden={true} />
+    </nav>
+  </div>
+</header>
+<script type="module">
+  const menuCheckbox = document.getElementById("menu");
+  const mediaQuery = window.matchMedia("(min-width: 640px)"); // Breakpoint sm
+  const $navbar = document.querySelector("#navbar");
+
+  $navbar.querySelectorAll("a").forEach((anchor) => {
+    anchor.addEventListener("click", (_event) => {
+      if (document.body.style.overflowY === "hidden") {
+        hideOverFlow(false);
+      }
+    });
+  });
+
+  /** @param {boolean} value */
+  function hideOverFlow(value) {
+    if (value) {
+      window.scrollTo(0, 0);
+      document.body.style.overflowY = "hidden";
+    } else {
+      document.body.style.overflowY = "auto";
+    }
+  }
+
+  menuCheckbox.addEventListener("change", (e) =>
+    e.target.checked ? hideOverFlow(true) : hideOverFlow(false)
+  );
+
+  mediaQuery.addEventListener("change", (e) => {
+    if (e.matches) {
+      hideOverFlow(false);
+      menuCheckbox.checked = false;
+    }
+  });
+</script>
