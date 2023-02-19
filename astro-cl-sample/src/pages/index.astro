@@ -1,31 +1,113 @@
 ---
 import Layout from '@layouts/Layout.astro'
 import Container from '@components/Container.astro'
-import Sponsors from '@components/Sponsors.astro'
-import JoinQueensLeague from '@components/JoinQueensLeague.astro'
 const { hostname } = new URL(Astro.request.url)
 ---
 
-<Layout title='Kings League Infojobs'>
-	<main>
-		<section class='bg-principal py-5 sm:py-20'>
-			<Container>
-				<div class='grid grid-cols-4 lg:grid-cols-8 gap-10 w-full px-4 md:px-8'>
-					<div class='col-span-4  xl:col-span-3 flex flex-col gap-y-10'>
-						
-					</div>
-					<div class='col-span-4 lg:col-span-4 xl:col-span-5 mt-[20px] lg:mt-0'>
-						<div class='grid grid-cols-6 gap-y-10 gap-x-5 w-full'>
+<Layout title='Adler Textil' bgbody='1'>
+	<main class="bg-principal">
+		<section
+			class="relative bg-[url(/images/slider-bg-03.jpg)] bg-cover bg-center bg-no-repeat"
+			>
+			<div
+				class="absolute inset-0 bg-white/75 sm:bg-transparent sm:bg-gradient-to-r sm:from-orange/50 sm:to-principal/25"
+			></div>
 
-							
+			<div
+				class="clasbanner relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
+				<div class="max-w-2xl text-center sm:text-left">
+				<h1 class="text-3xl font-extrabold sm:text-5xl text-white letras">
+					Somos una empresa
+					<strong class="block font-extrabold text-principal">
+					Peruana
+					</strong>
+				</h1>
 
+				<p class="mt-4 max-w-lg sm:text-xl sm:leading-relaxed text-white">
+					que nos dedicamos al rubro textil de corte y confección de prendas de vestir.
+				</p>
+
+				<div class="mt-8 flex flex-wrap gap-4 text-center">
+					<a
+					href="/quienessomos"
+					class="block w-full rounded bg-principal px-12 py-3 text-sm font-medium text-white shadow hover:bg-rose-700 focus:outline-none focus:ring active:bg-rose-500 sm:w-auto"
+					>
+					Nosotros
+					</a>
+
+					<a
+					href="/servicios"
+					class="block w-full rounded bg-white px-12 py-3 text-sm font-medium text-rose-600 shadow hover:text-rose-700 focus:outline-none focus:ring active:text-rose-500 sm:w-auto"
+					>
+					Servicios
+					</a>
+				</div>
+				</div>
+			</div>
+		</section>
+		<Container>
+			<main class="relative max-w-7xl m-auto sm:shadow-xl sm:rounded -mt-20 z-10 sm:mb-40 flex justify-center flex-col [&_p]:text-lg [&_p]:lg:text-xl [&_p]:text-gray-800">	   
+				<div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">										
+					<div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-white">
+						<a href="#">
+							<img class="rounded-t-lg" src="/images/image-1.jpg" alt="" />
+						</a>
+						<div class="p-5">
+							<a href="#">
+								<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-900">Bordado</h5>
+							</a>
+							<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+							<a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+								Leer más
+								<svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+							</a>
 						</div>
-						<div class='my-10'>
+					</div>
+
+					<div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+						<a href="#">
+							<img class="rounded-t-lg" src="/images/image-1.jpg" alt="" />
+						</a>
+						<div class="p-5">
+							<a href="#">
+								<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Corte y confección</h5>
+							</a>
+							<p class="mb-3 font-normal text-white dark:text-white">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+							<a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+								Leer más
+								<svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+							</a>
+						</div>
+					</div>
+
+					<div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+						<a href="#">
+							<img class="rounded-t-lg" src="/images/image-1.jpg" alt="" />
+						</a>
+						<div class="p-5">
+							<a href="#">
+								<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Productos</h5>
+							</a>
+							<p class="mb-3 font-normal text-white">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+							<a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+								Leer más
+								<svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+							</a>
 						</div>
 					</div>
 				</div>
-			</Container>
-			<JoinQueensLeague />
-		</section>
+			</main>
+		</Container>
 	</main>
 </Layout>
+<style>
+	.clasbanner h1.letras {
+		font-family: Mono;
+	}
+	.clasbanner strong {
+		font-family: Led;
+	}
+	.bg-principal {
+		background-color: #cd5500;
+	}
+</style>

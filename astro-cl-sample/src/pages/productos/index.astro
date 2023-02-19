@@ -1,0 +1,97 @@
+---
+import Container from "@components/Container.astro";
+import SectionTitle from "@components/SectionTitle.astro";
+import Layout from "@layouts/Layout.astro";
+---
+
+<Layout title="Servicios">
+    <section class="grid grid-cols-1 gap-0 bg-blue-100 bg-opacity-25 md:grid-cols-2">
+        <div class="flex flex-col items-start justify-center px-4 py-24 lg:px-20">
+          <span class="mb-3 text-white bg-blue-900 badge">Servicio</span>
+          <h1 class="mb-6 text-4xl font-bold leading-tight text-blue-900 md:text-4xl lg:text-5xl">Bordado.</h1>
+          
+          <p class="pr-0 mb-4 text-sm text-blue-800 tracking-relaxed lg:pr-16">Servicio de Bordados en todo tipo de telas y técnicas, como aplicados, lentejuelas y otros. Gran capacidad de respuesta a los distintos requerimientos.</p>
+          <form class="w-full mb-6">
+            <label class="sr-only">Your Email</label>
+            <div class="block lg:hidden">              
+              <button class="w-full mt-2 text-white bg-blue-900 hover:bg-blue-800 btn btn-lg" type="submit">Servicio de bordado</button>
+            </div>
+            <div class="hidden w-full form-append lg:flex">
+                
+            </div>
+          </form>
+        </div>
+        <div>
+          <img
+            src="https://themetechmount.com/wordpress/fablio/wp-content/uploads/2021/02/3-min-1024x683.jpg"
+            alt="3 women looking at a laptop"
+            class="object-cover w-full h-64 bg-gray-100 md:h-full"
+            loading="lazy"
+          />
+        </div>
+      </section>
+      
+  <SectionTitle title="Quienes somos" />
+  <Container>
+    <main
+    class="max-w-6xl m-auto bg-white p-8 sm:p-20 sm:shadow-xl sm:rounded -mt-10 z-10 flex justify-center flex-col [&_p]:text-lg [&_p]:lg:text-xl [&_p]:text-gray-800"
+    >	   
+    <h2 class="font-title text-3xl mb-4">Quienes somos</h2>
+    <p>
+        <strong>Somos una empreas peruana </strong> 
+        que nos dedicamos al rubro textil de corte y confección de prendas de vestir, uniformes, administrativos, empresariales, intitucionales, para damas, caballeros y niños.
+    </p>
+
+    <div class="my-6 flex flex-col gap-12">
+        <section class="w-full">
+            <div class="container mx-auto">
+                <div class="flex flex-wrap">
+                    <div class="lg:pt-12 pt-6 w-full md:w-4/12 text-center  border-black">
+                        <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg border-solid border-2">
+                            <div class="px-4 py-5 flex-auto">
+                                <div class="text-white p-3 text-center inline-flex items-center justify-center w-20 h-20 mb-5 shadow-lg rounded-full bg-red-400">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-15 h-15">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.672zm-7.518-.267A8.25 8.25 0 1120.25 10.5M8.288 14.212A5.25 5.25 0 1117.25 10.5" />
+                                    </svg>                                                                           
+                                </div>
+                                <h6 class="text-xl font-semibold">Misión:</h6>
+                                <p class="mt-2 mb-4 text-gray-600">
+                                    Es brindar el servicio de confección, cumpliendo estandares de calidad para satisfacer, las necesidades de nuestros clientes, con responsabilidad y eficiencia que permita el crecimiento de nuestra empresa y sus colaboradores
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-4/12 px-4 text-center border-black">
+                        <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg border-solid border-2">
+                            <div class="px-4 py-5 flex-auto">
+                                <div class="text-white p-3 text-center inline-flex items-center justify-center w-20 h-20 mb-5 shadow-lg rounded-full bg-blue-400">
+                                    <svg height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg" class="w-14 h-14"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(2 5)"><path d="m8.5 11c3.1296136 0 5.9629469-1.83333333 8.5-5.5-2.5370531-3.66666667-5.3703864-5.5-8.5-5.5-3.12961358 0-5.96294692 1.83333333-8.5 5.5 2.53705308 3.66666667 5.37038642 5.5 8.5 5.5z"/><path d="m8.5 2c.18463928 0 .36593924.01429736.54285316.04184538-.02850842.148891-.04285316.30184762-.04285316.45815462 0 1.38071187 1.1192881 2.5 2.5 2.5.156307 0 .3092636-.01434474.4576252-.04178957.0280774.17585033.0423748.35715029.0423748.54178957 0 1.93299662-1.5670034 3.5-3.5 3.5-1.93299662 0-3.5-1.56700338-3.5-3.5s1.56700338-3.5 3.5-3.5z"/></g></svg>
+                                </div>
+                                <h6 class="text-xl font-semibold">Visión:</h6>
+                                <p class="mt-2 mb-4 text-gray-600">
+                                    Ser una empresa reconocida a nivel munidial por el servicio de calidad y el cumplimiento cabal de nuestras obligaciones, crecer en forma confjunta en base a la satisfacción d elas espectativas de nuestros clientes.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-6 w-full md:w-4/12 text-center border-black">
+                        <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg border-solid border-2">
+                            <div class="px-4 py-5 flex-auto">
+                                <div class="text-white p-3 text-center inline-flex items-center justify-center w-20 h-20 mb-5 shadow-lg rounded-full bg-green-400">
+                                    <svg height="21" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg" class="w-14 h-14"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(2 4)"><path d="m13.5 0 3 4-8 10-8-10 3.009-4z"/><path d="m.5 4h16"/><path d="m5.5 4 3 10"/><path d="m11.5 4-3 10"/><path d="m3.509 0 1.991 4 3-4 3 4 2-4"/></g></svg>
+                                </div>
+                                <h6 class="text-xl font-semibold">Valores:</h6>
+                                <p class="mt-2 mb-4 text-gray-600">
+                                    NUestra empresa se sustenenta  en el accionar de sus integrantes con respeto, puntualidad, calidad, innovación y trabajo en equipo.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>      
+    
+    </main>
+</Container>
+</Layout>

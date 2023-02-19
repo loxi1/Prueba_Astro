@@ -1,30 +1,118 @@
 ---
-import Layout from '@layouts/Layout.astro'
-import SectionTitle from '@components/SectionTitle.astro'
-import Container from '@components/Container.astro'
+import Container from "@components/Container.astro";
+import SectionTitle from "@components/SectionTitle.astro";
+import Layout from "@layouts/Layout.astro";
 ---
 
-<!-- Página del calendario -->
-<Layout title='Calendario'>
-	<SectionTitle title='Calendario' />
-	<Container>
-		<main
-			class='bg-white p-8 sm:p-20 shadow-xl rounded -mt-10 z-10 mb-40 flex justify-center flex-col'
-		>
-			<div class='max-w-5xl mx-auto my-4'>			
+<Layout title="Contacto">
+  <SectionTitle title="Contacto" />
 
-				<section class='max-w-5xl mx-auto my-4'>
-					<header
-						class='border-b-2 border-b-black text-white py-2 px-4 bg-black text-center rounded-t-lg'
-					>
-						<p class='text-[25px]'>25 y 26 de marzo de 2023</p>
-						<p class='font-semibold'>Playoff</p>
-					</header>
-					<main class='border-b-2 border-l-2 border-r-2 rounded-lg border-slate-100'>
-						<img src='/playoffImage/playoff.webp' alt='playoff' />
-					</main>
-				</section>
+  <Container>
+    <main
+      class="max-w-5xl m-auto bg-white p-8 sm:p-20 sm:shadow-xl sm:rounded -mt-10 z-10 sm:mb-40 flex justify-center flex-col [&_p]:text-lg [&_p]:lg:text-xl [&_p]:text-gray-800"
+    >	   
+      <h2 class="font-title text-3xl mb-4">Horario de atención</h2>
+      <p>
+        <strong
+          >Sólo se podrá acceder al recinto con acreditación o invitación.</strong
+        > Horario de atención de lunes a viernes de 8.00 a. m. a 5.00 p. m. (horario
+        corrido)..
+      </p>
+
+      <div class="my-6 flex flex-col gap-12">
+        <section class="flex flex-col gap-6">
+          <h2 class="font-bold text-2xl text-orange-500">Accesos</h2>
+          <div class="border-2">
+            <iframe
+              title="Mapa de Google Maps ubicado en el pabellón de la Zona deportiva Port de Barcelona."
+              class="block m-auto w-full"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.3552011735433!2d2.1441944!3d41.322888899999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3b1655994fcebd8b!2zNDHCsDE5JzIyLjQiTiAywrAwOCczOS4xIkU!5e0!3m2!1ses!2sar!4v1673127000905!5m2!1ses!2sar"
+              width="600"
+              height="450"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            >
+            </iframe>
+          </div>
+        </section>
+
+        <hr />
+
+        <section class="flex flex-col gap-6">
+          <h2 class="font-title text-3xl mb-4">Cómo llegar al recinto</h2>
+
+          <h3 class="font-bold text-2xl text-orange-500">Transporte Público</h3>
+          <p>
+            <strong>Paradero:</strong> JR. LOS TERRAZOS F - 12 ASOC. INCA MANCO CAPAC
+            PROG. LA BASILIA / SJL / LIMA.
+          </p>
+          <p>
+            <strong>Desde estación del tren:</strong> Paradero 1 – L1 (Santa Rosa)
+            – BASILIA | Lima.
+          </p>
+        </section>
+      </div>
+
+      <div>
+        <p>
+          Para más información, escríbenos a: <a
+            class="block text-orange-500"
+            href="mailto:gsorozcop@gmail.com"
+            target="_blank"
+            rel="noopener norefferer"
+          >
+            gsorozcop@gmail.com
+          </a>
+        </p>
+      </div>
+	  <div class="flex justify-center">
+		<div class="flex flex-col md:flex-row justify-center w-full  mt-5">
+			<div class="flex flex-col px-7 py-2 bg-slate-200  w-full rounded-tl-3xl">
+				<div class="text-lg font-semibold">
+					<h1>Enviar mensaje</h1>
+				</div>
+				<div class="flex flex-col md:flex-row ">
+					<div class="">
+						<input type="text" name="nombre" id="nombre" placeholder="Ingresar nombre" class="w-full border-2 border-white px-3 py-1 text-sm outline-none placeholder:text-black placeholder:opacity-40 mt-4 mr-2 focus:border-blue-500 duration-200 ease-in-out rounded-lg">
+					</div>
+					<div class="">
+						<input type="text" name="apellidos" id="apellidos" placeholder="Ingresar apellidos" class="w-full md:w-[95%] border-2 border-white px-3 py-1 text-sm outline-none placeholder:text-black placeholder:opacity-40 mt-4 md:ml-2 focus:border-blue-500 duration-200 ease-in-out rounded-lg">
+					</div>
+				</div>
+				<input type="email" name="correo" id="correo" placeholder="Ingresar correo" class="w-full border-2 border-white text-sm outline-none px-3 py-1 placeholder:text-black placeholder:opacity-40 mt-4 focus:border-blue-500 duration-200 ease-in-out rounded-lg">
+				<input type="tel" name="celular" id="celular" placeholder="Nuemero de celuar" class="w-full border-2 border-white text-sm outline-none px-3 py-1 placeholder:text-black placeholder:opacity-40 mt-4 focus:border-blue-500 duration-200 ease-in-out rounded-lg">
+				<input type="text" name="asunto" id="asunto" placeholder="Asunto" class="w-full border-2 border-white text-sm outline-none px-3 py-1 placeholder:text-black placeholder:opacity-40 mt-4 focus:border-blue-500 duration-200 ease-in-out rounded-lg">
+				<textarea id="message" name="message" placeholder="Escribir un mensaje" class="mb-3 w-full border-2 border-white h-44 text-sm outline-none placeholder:text-black placeholder:opacity-40 focus:border-blue-500 py-1 px-3 mt-4 resize-none leading-6 duration-200 ease-in-out rounded-lg"></textarea>
+				<button class="bg-gradient-to-b from-principal-dark via-principal-dark to-principal hover:bg-principal-200 font-semibold text-white uppercase px-24 md:px-[118px] lg:px-[140px] py-2 rounded-md text-center mx-auto my-3 rounded-tr-lg rounded-bl-lg">Enviar</button>
 			</div>
-		</main>
-	</Container>
+			<div class="flex flex-col bg-gradient-to-b from-principal-dark via-principal-dark to-principal text-white md:w-[65%] rounded-br-3xl">
+				<h1 class="font-semibold px-5 my-5">Información de contacto</h1>
+				<div class="flex px-5 space-x-2">
+					<svg fill="white" width="20" height="20" class="text-orange-500  mt-1 my-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>					
+					<span class="text-sm">+51 991 152 427</span>
+				</div>
+				<div class="flex px-5 space-x-2">
+					<svg fill="white" width="20" height="20" class="text-orange-500  mt-1 my-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+					<span class="text-sm">+51 913 746 197</span>
+				</div>
+				<div class="flex px-5 space-x-2">
+					<ion-icon name="mail" class="text-orange-500  mt-1 my-3"></ion-icon>
+					<span class="text-sm">gsorozcop@gmail.com</span>
+				</div>
+				<div class="flex px-5 space-x-2">
+					<ion-icon name="globe-outline" class="text-orange-500 mt-1 my-3" ></ion-icon>
+					<span class="text-sm">www.adler.com</span>
+				</div>
+				<div class="px-5 space-x-5 mt-7 mx-auto mb-5" >
+					<a href="#"><i class="fa-brands fa-facebook-f text-white text-2xl"></i></a>
+					<a href="#"><i class="fa-brands fa-instagram text-red-500  text-2xl"></i></a>
+					<a href="#"><i class="fa-brands fa-linkedin text-yellow-500 text-2xl"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+    </main>
+  </Container>
 </Layout>
